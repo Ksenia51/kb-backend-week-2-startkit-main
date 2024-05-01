@@ -6,8 +6,8 @@ const {
   defaultRouteController,
   voteRouteController
 } = require("./controllers");
-
-module.exports = gameRouteController;
+const staticFile = require("./appModules/http-utils/static-file");
+const mimeTypes = require("./appModules/http-utils/mime-types");
 
 const PORT = 3005;
 
@@ -25,13 +25,7 @@ const server = http.createServer((req, res) => {
       break;
     default:
       defaultRouteController(res, url);
-      const extname = String(path.extname(url)).toLowerCase();
-      if (extname in mimeTypes) {
-        staticFile(res, url, extname);
-      } else {
-        res.statusCode = 404;
-        res.end("Not Found");
-      }
   }
 });
 
+server.listen(PORT);

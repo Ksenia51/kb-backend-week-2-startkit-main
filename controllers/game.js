@@ -11,6 +11,8 @@ async function gameRouteController(res) {
       const game = getRandomGame(data);
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");
-      res.end(JSON.stringify({ route: "game"}));
+      res.end(JSON.stringify(game));
     });
-  }
+  };
+
+  module.exports = gameRouteController;

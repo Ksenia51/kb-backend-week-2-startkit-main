@@ -3,9 +3,9 @@ const defaultRouteController = require("./default");
 const mainRouteController = require("./main");
 const voteRouteController = require("./vote");
 
-module.exports = (
+module.exports = {
     gameRouteController,
     mainRouteController,
     defaultRouteController,
     voteRouteController
-);
+};

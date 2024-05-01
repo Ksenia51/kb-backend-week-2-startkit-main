@@ -12,4 +12,4 @@ function staticFile(res, filePath, ext) {
     });
   }
   
-  module.exports = staticFile
+  module.exports = staticFile;

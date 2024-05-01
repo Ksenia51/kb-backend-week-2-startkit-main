@@ -2,7 +2,7 @@ const PATH_TO_RATING_FILE = "./dataset/rating.json";
 
 const WEIGHT = {
     gameplay: 2,
-    desing: 1,
+    design: 1,
     idea: 3,
 };
 
