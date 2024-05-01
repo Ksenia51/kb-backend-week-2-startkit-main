@@ -4,7 +4,7 @@ const { WEIGHT, PATH_TO_RATING_FILE } = require("../rating/config");
 const fs = require("fs").promises;
 
 async function voteRouteController(req, res) {
-if(res.method !=='POST'){
+if(req.method !=='POST'){
     res.statusCode = 404;
     res.end("Method not allowed");
 }

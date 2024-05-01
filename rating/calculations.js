@@ -1,7 +1,7 @@
 function createRating(obj, weight) {
     return (
         obj.gameplay * weight.gameplay +
-        obj.desing * weight.desing +
+        obj.design * weight.desing +
         obj.idea * weight.idea 
     );
 }

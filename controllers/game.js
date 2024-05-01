@@ -8,9 +8,11 @@ async function gameRouteController(res) {
         res.end("Internal Server Error");
       }
       const data = JSON.parse(ratingFile);
-      const game = getRandomGame(data);
+      const game = getRandomGame(game);
       res.statusCode = 200;
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify({ route: "game"}));
     });
-  }
+  };
+
+  module.exports = {gameRouteController};
