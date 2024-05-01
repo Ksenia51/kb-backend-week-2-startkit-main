@@ -9,8 +9,6 @@ const {
 const staticFile = require("./appModules/http-utils/static-file");
 const mimeTypes = require("./appModules/http-utils/mime-types");
 
-module.exports = gameRouteController;
-
 const PORT = 3005;
 
 const server = http.createServer((req, res) => {
@@ -30,3 +28,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
+server.listen(PORT);

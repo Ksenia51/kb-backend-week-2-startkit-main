@@ -1,5 +1,5 @@
 const parseBody = require("../appModules/http-utils/parse-body");
-const { createRating, updateRating } = require("../rating");
+const { createRating, updateRating } = require("../rating/calculations");
 const { WEIGHT, PATH_TO_RATING_FILE } = require("../rating/config");
 const fs = require("fs").promises;
 
